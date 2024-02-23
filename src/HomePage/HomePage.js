@@ -6,7 +6,7 @@ import * as d3 from "d3";
 const HomePage = () => {
   const fetchBudgetData = async () => {
     try {
-      const response = await axios.get("/budget.json");
+      const response = await axios.get("http://localhost:3001/budget");
       const budgetData = response.data.myBudget;
       drawChartJS(budgetData);
       drawD3Chart(budgetData);
